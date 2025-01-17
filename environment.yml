@@ -1,14 +1,20 @@
 name: deinterlace  # Remember to modify to suit your project name
 channels: 
+  - conda-forge
   - pytorch
   - nvidia
-  - conda-forge
+  - nodefaults
 dependencies:
   - python=3.10
   - dvc
   - dvc-ssh
   - conda-lock
+  - pytorch  # or pytorch-gpu
+  - torchvision 
+  - torchaudio 
+  - pytorch-cuda=11.8
 
 # Non-standard section listing target platforms for conda-lock, modify according to your needs:
 platforms:
+  - win-64
   - linux-64
